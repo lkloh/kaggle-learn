@@ -23,9 +23,11 @@ model = DecisionTreeRegressor()
 
 model.fit(x, y)
 
-print("Making predictions for the following 5 houses:")
-print(x.head())
+num_houses_to_predict = 7
+
+print("Making predictions for the following %d houses:" % num_houses_to_predict)
+print(x.head(n=num_houses_to_predict))
 
 print("\n Predictions")
-print(model.predict(x.head()))
+print(model.predict(x.head(n=num_houses_to_predict)))
 
